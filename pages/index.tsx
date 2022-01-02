@@ -43,8 +43,8 @@ function Home(): JSX.Element {
         </h1>
         <hr />
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
-          {snippets.map(({ title, source }) => (
-            <Card key={title} source={source} />
+          {snippets.map(({ title, editLink, source, animation }) => (
+            <Card key={title} editLink={editLink} source={source} animation={animation} />
           ))}
         </div>
       </main>

@@ -13,6 +13,17 @@ module.exports = {
         gray: colors.slate,
       },
       keyframes: {
+        tilt: {
+          "0%, 50%, 100%": {
+            transform: "rotate(0deg)",
+          },
+          "25%": {
+            transform: "rotate(0.5deg)",
+          },
+          "75%": {
+            transform: "rotate(-0.5deg)",
+          },
+        },
         flash: {
           "0%": { opacity: "0.2" },
           "20%": { opacity: "1" },
@@ -31,6 +42,7 @@ module.exports = {
         },
       },
       animation: {
+        tilt: "tilt 10s infinite linear",
         flash: "flash 1.4s infinite linear",
         shimmer: "shimmer 8s ease-in-out infinite",
         swing: "swing 1s ease 1",

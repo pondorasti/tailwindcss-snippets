@@ -54,10 +54,6 @@ function Home(): JSX.Element {
           {snippets.map(({ title, source }) => (
             <Card key={title} source={source} />
           ))}
-
-          <div className="bg-gray-800 h-32 w-full rounded-lg flex">
-            <div className="m-auto text-gray-200"></div>
-          </div>
         </div>
       </main>
 

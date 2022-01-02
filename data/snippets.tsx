@@ -126,6 +126,16 @@ const snippets: ISnippet[] = [
     },`,
   },
   {
+    title: "Underlay Expanding Circle",
+    source: (
+      <div className="group px-6 py-3 rounded-lg overflow-hidden bg-gray-200 relative before:absolute before:bg-sky-600 before:top-1/2 before:left-1/2 before:h-8 before:w-8 before:-translate-y-1/2 before:-translate-x-1/2 before:rounded-full before:scale-[0] before:opacity-0 hover:before:scale-[6] hover:before:opacity-100 before:transition before:ease-in-out before:duration-500">
+        <span className="relative z-0 text-black group-hover:text-gray-200 transition ease-in-out duration-500">
+          Hover over me
+        </span>
+      </div>
+    ),
+  },
+  {
     title: "Three Dots Loader",
     source: (
       <div>
@@ -160,6 +170,44 @@ const snippets: ISnippet[] = [
         Hover over me
       </div>
     ),
+  },
+  {
+    title: "Flick Up",
+    source: (
+      <div className="relative overflow-hidden group">
+        <span className="invisible">Hover over me</span>
+        <span className="absolute top-0 left-0 group-hover:-translate-y-full transition-transform ease-in-out duration-500 hover:duration-300">
+          Hover over me
+        </span>
+        <span className="absolute top-0 left-0 translate-y-full group-hover:translate-y-0 transition-transform ease-in-out duration-500 hover:duration-300">
+          Hover over me
+        </span>
+      </div>
+    ),
+  },
+  {
+    title: "Gradient Tilt",
+    source: (
+      <div className="relative group">
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+        <div className="relative px-6 py-3 bg-gray-200 text-black rounded-lg">Hover over me</div>
+      </div>
+    ),
+    animation: `keyframes: {
+      tilt: {
+        "0%, 50%, 100%": {
+          transform: "rotate(0deg)",
+        },
+        "25%": {
+          transform: "rotate(0.5deg)",
+        },
+        "75%": {
+          transform: "rotate(-0.5deg)",
+        },
+    },
+    animation: {
+      tilt: "tilt 10s infinite linear",
+    },`,
   },
 ]
 

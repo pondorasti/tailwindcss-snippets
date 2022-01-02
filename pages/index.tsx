@@ -1,14 +1,6 @@
 import Head from "next/head"
+import Card from "@components/Card"
 import snippets from "@data/snippets"
-
-function Card({ source }: ISnippet): JSX.Element {
-  // console.log(source.props.className)
-  return (
-    <div className="bg-gray-800 border border-gray-500/30 h-32 w-full rounded-lg flex cursor-context-menu">
-      <div className="m-auto text-gray-200">{source}</div>
-    </div>
-  )
-}
 
 function Home(): JSX.Element {
   const linkStyle = "text-sm font-medium text-gray-200 opacity-70 hover:opacity-100 transition-[opacity] duration-200"
@@ -17,7 +9,7 @@ function Home(): JSX.Element {
   return (
     <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8">
       <Head>
-        <title>Tailwind Snippets</title>
+        <title>TailwindCSS Snippets</title>
         <meta name="description" content="A collection of snippets made with TailwindCSS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

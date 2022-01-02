@@ -51,7 +51,7 @@ const snippets: ISnippet[] = [
         fill="none"
         viewBox="0 0 24 24"
       >
-        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
         <path
           className="opacity-75"
           fill="currentColor"

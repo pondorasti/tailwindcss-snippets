@@ -1,5 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 const colors = require("tailwindcss/colors")
+const plugin = require("tailwindcss/plugin")
 
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}", "./data/**/*.{js,ts,jsx,tsx}"],
@@ -36,5 +37,13 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase }) {
+      addBase({
+        hr: {
+          "@apply mt-16 mx-auto h-px w-12 opacity-10": {},
+        },
+      })
+    }),
+  ],
 }

@@ -1,209 +1,77 @@
 import Head from "next/head"
+import snippets from "@data/snippets"
 
-interface ICard {
-  title?: string
-  source: JSX.Element
-  animation?: string
-}
-
-const cards: ICard[] = [
-  {
-    title: "Underline Left Right",
-    source: (
-      <div className="relative after:absolute after:bg-gray-200 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300">
-        Hover over me
-      </div>
-    ),
-  },
-  {
-    title: "Pulse",
-    source: (
-      <div className="flex h-8 w-8 absolute">
-        <span className="animate-ping absolute h-8 w-8 -top-4 -left-4 rounded-full bg-gray-200 opacity-75"></span>
-        <span className="relative rounded-full h-8 w-8 -top-4 -left-4 bg-gray-200"></span>
-      </div>
-    ),
-  },
-  {
-    title: "Keyboard Button",
-    source: (
-      <div className="px-6 py-3 bg-gray-200 text-black rounded-lg border-b-4 border-b-gray-400 hover:border-b-0 transition-all ease-in-out duration-100">
-        Hover over me
-      </div>
-    ),
-  },
-  {
-    title: "Underlay Marker",
-    source: (
-      <div className="relative before:absolute before:bg-sky-600 before:bottom-0 before:left-0 before:h-full before:w-full before:origin-bottom before:scale-y-[0.35] hover:before:scale-y-100 before:transition-transform before:ease-in-out before:duration-500">
-        <span className="relative">Hover over me</span>
-      </div>
-    ),
-  },
-  {
-    title: "Underlay Left",
-    source: (
-      <div className="group px-6 py-3 rounded-lg bg-gray-200 overflow-hidden relative before:absolute before:bg-sky-600 before:bottom-0 before:left-0 before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:transition before:ease-in-out before:duration-500">
-        <span className="relative z-0 text-black group-hover:text-gray-200 transition ease-in-out duration-500">
-          Hover over me
-        </span>
-      </div>
-    ),
-  },
-  {
-    title: "Spinner",
-    source: (
-      <svg
-        className="animate-spin -ml-1 mr-3 h-8 w-8 text-white"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-      >
-        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-        <path
-          className="opacity-75"
-          fill="currentColor"
-          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-        ></path>
-      </svg>
-    ),
-  },
-  {
-    title: "Hover & Active Scale Button",
-    source: (
-      <div className="px-6 py-3 bg-gray-200 text-black rounded-lg hover:scale-110 active:scale-90 transition-transform ease-in-out duration-200">
-        Hover &amp; hold me
-      </div>
-    ),
-  },
-  {
-    title: "Swing",
-    source: <div className="hover:animate-swing">Hover over me</div>,
-    animation: `keyframes: {
-      swing: {
-        "15%": { transform: "translateX(5px)" },
-        "30%": { transform: "translateX(-5px)" },
-        "50%": { transform: "translateX(3px)" },
-        "80%": { transform: "translateX(2px)" },
-        "100%": { transform: "translateX(0)" },
-      },
-    },
-    animation: {
-      swing: "swing 1s ease 1",
-    },`,
-  },
-  {
-    title: "Underline Bottom Top",
-    source: (
-      <div className="relative after:absolute after:bg-gray-200 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-y-1 after:opacity-0 hover:after:translate-y-0 hover:after:opacity-100 after:transition after:ease-in-out after:duration-200">
-        Hover over me
-      </div>
-    ),
-  },
-  {
-    title: "Underlay Left Right",
-    source: (
-      <div className="group px-6 py-3 rounded-lg bg-gray-200 overflow-hidden relative before:absolute before:bg-sky-600 before:bottom-0 before:left-0 before:h-full before:w-full before:origin-[100%_100%] before:scale-x-0 hover:before:origin-[0_0] hover:before:scale-x-100 before:transition before:ease-in-out before:duration-500">
-        <span className="relative z-0 text-black group-hover:text-gray-200 transition ease-in-out duration-500">
-          Hover over me
-        </span>
-      </div>
-    ),
-  },
-  {
-    title: "Text Transform & Color",
-    source: (
-      <div className="text-gray-200 translate-x-0 hover:text-sky-600 hover:translate-x-1 transition ease-in-out duration-200">
-        Hover over me
-      </div>
-    ),
-  },
-  {
-    title: "Shimmer",
-    source: (
-      <div className="animate-shimmer bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-[length:400%_100%] h-12 w-40 rounded-lg"></div>
-    ),
-    animation: `keyframes: {
-      shimmer: {
-        from: { backgroundPosition: "200% 0" },
-        to: { backgroundPosition: "-200% 0" },
-      },
-    },
-    animation: {
-      shimmer: "shimmer 8s ease-in-out infinite",
-    },`,
-  },
-  {
-    title: "Three Dots Loader",
-    source: (
-      <div>
-        <span className="w-2 h-2 ml-2 rounded-full bg-gray-200 inline-block animate-flash"></span>
-        <span className="w-2 h-2 ml-2 rounded-full bg-gray-200 inline-block animate-flash [animation-delay:0.2s]"></span>
-        <span className="w-2 h-2 ml-2 rounded-full bg-gray-200 inline-block animate-flash [animation-delay:0.4s]"></span>
-      </div>
-    ),
-    animation: `keyframes: {
-      flash: {
-        "0%": { opacity: "0.2" },
-        "20%": { opacity: "1" },
-        "100%": { opacity: "0.2" },
-      },
-    },
-    animation: {
-      flash: "flash 1.4s infinite linear",
-    },`,
-  },
-  {
-    title: "Hover Scale Button",
-    source: (
-      <div className="px-6 py-3 bg-gray-200 text-black rounded-lg hover:scale-110 transition-transform ease-in-out duration-200">
-        Hover over me
-      </div>
-    ),
-  },
-  {
-    title: "Active Underline Left Right",
-    source: (
-      <div className="relative after:absolute after:bg-gray-200 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300">
-        Hover over me
-      </div>
-    ),
-  },
-]
-
-function Card({ source }: ICard): JSX.Element {
+function Card({ source }: ISnippet): JSX.Element {
   // console.log(source.props.className)
   return (
-    <div className="bg-gray-800 border border-gray-500/30 h-32 w-56 rounded-lg flex cursor-context-menu">
+    <div className="bg-gray-800 border border-gray-500/30 h-32 w-full rounded-lg flex cursor-context-menu">
       <div className="m-auto text-gray-200">{source}</div>
     </div>
   )
 }
 
 function Home(): JSX.Element {
+  const linkStyle = "text-sm font-medium text-gray-200 opacity-70 hover:opacity-100 transition-[opacity] duration-200"
+  const iconStyle = "h-6 w-6"
+
   return (
-    <div>
+    <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8">
       <Head>
         <title>Tailwind Snippets</title>
         <meta name="description" content="A collection of snippets made with TailwindCSS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="max-w-screen-lg mx-auto mt-8">
-        {/* <h1>Right click the animation to copy the styling</h1> */}
+      <header className="text-white py-8 flex items-center justify-between">
+        <div className="tracking-wide font-medium text-lg">TailwindCSS Snippets</div>
+        <div className="flex gap-4">
+          <a className={linkStyle} target="_blank" rel="noopener noreferrer" href="https://twitter.com/Pondorasti/">
+            <span className="sr-only">Twitter account</span>
+            <svg className={iconStyle} viewBox="0 0 24 24" fill="currentColor">
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"></path>
+            </svg>
+          </a>
+          <a className={linkStyle} target="_blank" rel="noopener noreferrer" href="https://github.com/pondorasti/">
+            <span className="sr-only">GitHub account</span>
+            <svg className={iconStyle} viewBox="0 0 24 24" fill="currentColor">
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48C19.137 20.107 22 16.373 22 11.969 22 6.463 17.522 2 12 2z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </header>
 
-        <div className="flex flex-wrap gap-8">
-          {cards.map(({ source }) => (
-            <Card source={source} />
+      <main>
+        <h1 className="mt-8 text-white text-center text-3xl font-semibold sm:text-4xl">
+          Right click the animation <br /> to copy the styling
+        </h1>
+        <hr />
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
+          {snippets.map(({ title, source }) => (
+            <Card key={title} source={source} />
           ))}
 
-          <div className="bg-gray-800 h-32 w-56 rounded-lg flex">
+          <div className="bg-gray-800 h-32 w-full rounded-lg flex">
             <div className="m-auto text-gray-200"></div>
           </div>
         </div>
       </main>
 
-      {/* <footer>built by alex</footer> */}
+      <footer>
+        <hr />
+        <div className="my-16 text-center text-gray-500 text-sm font-light">
+          Crafted by{" "}
+          <span className="text-gray-200">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/pondorasti/">
+              Alex
+            </a>
+          </span>
+        </div>
+      </footer>
     </div>
   )
 }

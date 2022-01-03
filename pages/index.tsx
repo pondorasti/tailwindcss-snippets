@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Card from "@components/Card"
+import LinkPreview from "@components/LinkPreview"
 import snippets from "@data/snippets"
 
 function Home(): JSX.Element {
@@ -10,7 +11,7 @@ function Home(): JSX.Element {
     <div className="relative max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 pb-16">
       <Head>
         <title>TailwindCSS Snippets</title>
-        <meta name="description" content="A collection of snippets made with TailwindCSS" />
+        <meta name="description" content="A collection of animation snippets made with TailwindCSS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -53,10 +54,11 @@ function Home(): JSX.Element {
         <hr />
         <div className="mt-16 text-center text-gray-500 text-sm font-light">
           Crafted by{" "}
-          <span className="text-gray-200">
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/pondorasti/">
+          <span className="text-gray-200 font-light">
+            <LinkPreview name="Alexandru" href="https://twitter.com/Pondorasti" alt="Alexandru's Twitter" />
+            {/* <a target="_blank" rel="noopener noreferrer" href="https://github.com/pondorasti/">
               Alex
-            </a>
+            </a> */}
           </span>
         </div>
       </footer>

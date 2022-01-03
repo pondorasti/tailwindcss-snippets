@@ -40,22 +40,32 @@ module.exports = {
           "80%": { transform: "translateX(2px)" },
           "100%": { transform: "translateX(0)" },
         },
+        "fade-in": {
+          from: { opacity: 0, transform: "scale(0.9)" },
+          to: { opacity: 1, transform: "scale(1.0)" },
+        },
+        "fade-out": {
+          from: { opacity: 1 },
+          to: { opacity: 0 },
+        },
+        "slide-in": {
+          "0%": { opacity: 0, transform: "translateY(16px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        "slide-out": {
+          "0%": { opacity: 1, transform: "translateY(0px)" },
+          "100%": { opacity: 0, transform: "translateY(16px)" },
+        },
       },
       animation: {
         tilt: "tilt 10s infinite linear",
         flash: "flash 1.4s infinite linear",
         shimmer: "shimmer 8s ease-in-out infinite",
         swing: "swing 1s ease 1",
-        "fade-in": "fade-in 300ms ease-out",
-        "fade-out": "fade-out 200ms ease-in",
-      },
-      "fade-in": {
-        from: { opacity: 0 },
-        to: { opacity: 1 },
-      },
-      "fade-out": {
-        from: { opacity: 1 },
-        to: { opacity: 0 },
+        "fade-in": "fade-in 0.1s ease-out",
+        "fade-out": "fade-out 0.1s ease-in",
+        "slide-in": "slide-in 0.2s ease-out",
+        "slide-out": "slide-out 0.2s ease-in",
       },
     },
   },

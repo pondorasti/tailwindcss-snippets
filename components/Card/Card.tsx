@@ -69,7 +69,7 @@ export default function Card({ source, animation, editLink }: ISnippet): JSX.Ele
         </div>
       </ContextMenu.Trigger>
       {isContextMenuOpen && (
-        <ContextMenu.Content className="radix-state-open:animate-fade-in w-52 px-1.5 py-1.5 rounded-lg bg-gray-900/95 backdrop-blur ring-1 ring-inset ring-gray-500/30">
+        <ContextMenu.Content className="radix-state-open:animate-fade-in radix-state-closed:animate-fade-out origin-top-left w-52 px-1.5 py-1.5 rounded-lg bg-gray-900/95 backdrop-blur ring-1 ring-inset ring-gray-500/30">
           <ContextMenu.Item className={itemStyle} onSelect={() => handleCopySource()}>
             <CodeIcon className="mb-px" />
             <span className={itemTextStyle}>Copy Source</span>

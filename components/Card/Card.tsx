@@ -3,6 +3,7 @@ import ReactDOMServer from "react-dom/server"
 import * as ContextMenu from "@radix-ui/react-context-menu"
 import { CodeIcon, MagicWandIcon, GitHubLogoIcon } from "@radix-ui/react-icons"
 import { useHotkeys } from "react-hotkeys-hook"
+import { trackGoal } from "fathom-client"
 
 export default function Card({ source, animation, editLink }: ISnippet): JSX.Element {
   const [isContextMenuOpen, setContextMenu] = useState(false)
@@ -14,6 +15,7 @@ export default function Card({ source, animation, editLink }: ISnippet): JSX.Ele
   // Copy Source
   function handleCopySource() {
     navigator.clipboard.writeText(ReactDOMServer.renderToStaticMarkup(source))
+    trackGoal("GHMTI4HH", 1)
   }
   useHotkeys(
     "s",

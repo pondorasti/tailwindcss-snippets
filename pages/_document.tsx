@@ -12,7 +12,10 @@ export default class Document extends NextDocument {
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-[#0a1120] bg-[url('/beams.png')] bg-cover bg-center bg-fixed">
+        <body className="relative bg-[#0a1120] ">
+          <div className="absolute h-full w-full bg-[url('/beams.png')] bg-cover bg-center bg-fixed">
+            <div className="absolute h-full w-full bg-[url('/grid.svg')] [background-position:calc(100%+5px)_calc(100%+5px)] bg-fixed" />
+          </div>
           <Main />
           <NextScript />
         </body>

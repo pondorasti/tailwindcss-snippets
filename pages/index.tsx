@@ -7,7 +7,7 @@ function Home(): JSX.Element {
   const iconStyle = "h-6 w-6"
 
   return (
-    <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8">
+    <div className="relative max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 pb-16">
       <Head>
         <title>TailwindCSS Snippets</title>
         <meta name="description" content="A collection of snippets made with TailwindCSS" />
@@ -39,7 +39,7 @@ function Home(): JSX.Element {
 
       <main>
         <h1 className="mt-8 text-white text-center text-3xl font-semibold sm:text-4xl">
-          Right click the animation <br /> to copy the styling
+          Right click the animation <br /> to copy the source
         </h1>
         <hr />
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
@@ -51,7 +51,7 @@ function Home(): JSX.Element {
 
       <footer>
         <hr />
-        <div className="my-16 text-center text-gray-500 text-sm font-light">
+        <div className="mt-16 text-center text-gray-500 text-sm font-light">
           Crafted by{" "}
           <span className="text-gray-200">
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/pondorasti/">

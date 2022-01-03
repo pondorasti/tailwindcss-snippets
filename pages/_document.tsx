@@ -12,7 +12,7 @@ export default class Document extends NextDocument {
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-gray-900">
+        <body className="bg-[#0a1120] bg-[url('/beams.png')] bg-cover bg-center bg-fixed">
           <Main />
           <NextScript />
         </body>

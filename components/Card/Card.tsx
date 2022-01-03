@@ -8,7 +8,7 @@ export default function Card({ source, animation, editLink }: ISnippet): JSX.Ele
   const [isContextMenuOpen, setContextMenu] = useState(false)
 
   const itemStyle =
-    "flex items-center px-2 py-2 text-xs rounded-md outline-none cursor-default select-none text-gray-500 focus:bg-white/5 transition-colors duration-200 disabled:opacity-75"
+    "flex items-center px-2 py-2 text-xs rounded-md outline-none cursor-default select-none text-gray-500 focus:bg-white/5 transition-colors ease-out duration-200 disabled:opacity-75"
   const itemTextStyle = "ml-2 flex-grow text-gray-200"
 
   // Copy Source
@@ -64,7 +64,7 @@ export default function Card({ source, animation, editLink }: ISnippet): JSX.Ele
       }}
     >
       <ContextMenu.Trigger>
-        <div className="bg-gray-800 ring-1 ring-inset ring-gray-500/20 h-28 w-full rounded-lg flex cursor-context-menu">
+        <div className="bg-gray-800/40 backdrop-blur ring-1 ring-inset ring-gray-500/20 h-28 w-full rounded-lg flex cursor-context-menu">
           <div className="m-auto text-gray-200">{source}</div>
         </div>
       </ContextMenu.Trigger>

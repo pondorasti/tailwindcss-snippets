@@ -9,7 +9,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en" className="nightwind">
         <Head>
-          <title>{title}</title>
+          <title>Snippets</title>
           <meta name="description" content={description} />
           <link rel="icon" href="/favicon.ico" />
 

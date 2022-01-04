@@ -39,8 +39,8 @@ module.exports = {
           to: { opacity: 1, transform: "scale(1.0)" },
         },
         "fade-out": {
-          from: { opacity: 1 },
-          to: { opacity: 0 },
+          from: { opacity: 1, transform: "scale(1.0)" },
+          to: { opacity: 0, transform: "scale(0.9)" },
         },
         "slide-in": {
           "0%": { opacity: 0, transform: "translateY(16px)" },
@@ -59,7 +59,7 @@ module.exports = {
         "fade-in": "fade-in 0.1s ease-out",
         "fade-out": "fade-out 0.1s ease-in",
         "slide-in": "slide-in 0.2s ease-out",
-        "slide-out": "slide-out 0.2s ease-in",
+        "slide-out": "slide-out 0.2s ease",
       },
     },
   },

@@ -1,11 +1,11 @@
 import { useState } from "react"
 import ReactDOMServer from "react-dom/server"
 import * as ContextMenu from "@radix-ui/react-context-menu"
-import { CodeIcon, MagicWandIcon, GitHubLogoIcon } from "@radix-ui/react-icons"
+import { CodeIcon, MagicWandIcon, PlayIcon, GitHubLogoIcon } from "@radix-ui/react-icons"
 import { useHotkeys } from "react-hotkeys-hook"
 import { trackGoal } from "fathom-client"
 
-export default function Card({ source, animation, editLink }: ISnippet): JSX.Element {
+export default function Card({ source, animation, editLink, playgroundLink }: ISnippet): JSX.Element {
   const [isContextMenuOpen, setContextMenu] = useState(false)
 
   const itemStyle =
@@ -37,6 +37,21 @@ export default function Card({ source, animation, editLink }: ISnippet): JSX.Ele
     () => {
       if (isContextMenuOpen) {
         handleCopyAnimation()
+        setContextMenu(false)
+      }
+    },
+    [isContextMenuOpen]
+  )
+
+  // Open in Playground
+  function handleOpenInPlayground() {
+    window.open(playgroundLink, "_blank")
+  }
+  useHotkeys(
+    "p",
+    () => {
+      if (isContextMenuOpen) {
+        handleOpenInPlayground()
         setContextMenu(false)
       }
     },
@@ -77,12 +92,19 @@ export default function Card({ source, animation, editLink }: ISnippet): JSX.Ele
             <span className={itemTextStyle}>Copy Source</span>
             <kbd>S</kbd>
           </ContextMenu.Item>
+          {/* TODO: disabled state */}
           <ContextMenu.Item className={itemStyle} onSelect={() => handleCopyAnimation()}>
             <MagicWandIcon className="mb-[2px]" />
             <span className={itemTextStyle}>Copy Keyframes</span>
             <kbd>K</kbd>
           </ContextMenu.Item>
+          {/* TODO: disabled state */}
           <ContextMenu.Separator className="h-px m-1 bg-gray-500/30" />
+          <ContextMenu.Item className={itemStyle} onSelect={() => handleOpenInPlayground()}>
+            <PlayIcon className="mb-px" />
+            <span className={itemTextStyle}>Open in Playground</span>
+            <kbd>P</kbd>
+          </ContextMenu.Item>
           <ContextMenu.Item className={itemStyle} onSelect={() => handleOpenInGithub()}>
             <GitHubLogoIcon className="mb-px" />
             <span className={itemTextStyle}>Open in Github</span>

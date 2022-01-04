@@ -42,8 +42,14 @@ function Home(): JSX.Element {
         </h1>
         <hr />
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
-          {snippets.map(({ title, editLink, source, animation }) => (
-            <Card key={title} editLink={editLink} source={source} animation={animation} />
+          {snippets.map(({ title, editLink, playgroundLink, source, animation }) => (
+            <Card
+              key={title}
+              editLink={editLink}
+              playgroundLink={playgroundLink}
+              source={source}
+              animation={animation}
+            />
           ))}
         </div>
       </main>
@@ -54,9 +60,6 @@ function Home(): JSX.Element {
           Crafted by{" "}
           <span className="text-gray-200 font-light">
             <LinkPreview name="Alexandru" href="https://twitter.com/Pondorasti" alt="Alexandru's Twitter" />
-            {/* <a target="_blank" rel="noopener noreferrer" href="https://github.com/pondorasti/">
-              Alex
-            </a> */}
           </span>
         </div>
       </footer>

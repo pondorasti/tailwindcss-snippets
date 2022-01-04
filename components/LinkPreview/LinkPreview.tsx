@@ -12,7 +12,7 @@ interface ILinkPreview {
 export default function LinkPreview({ name, href, alt, preview }: ILinkPreview) {
   const shimmer = (w: number, h: number) => `
     <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <rect id="r" width="${w}" height="${h}" fill="#0f172a" />
+      <rect id="r" width="${w}" height="${h}" fill="#1e293b" />
       <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
     </svg>`
 

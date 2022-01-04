@@ -9,7 +9,7 @@ export default function Card({ source, animation, editLink, playgroundLink }: IS
   const [isContextMenuOpen, setContextMenu] = useState(false)
 
   const itemStyle =
-    "flex items-center px-2 py-2 text-xs rounded-md outline-none cursor-default select-none text-gray-500 focus:bg-white/5 transition-colors ease-out duration-200 disabled:opacity-75"
+    "flex items-center px-2 py-2 text-xs rounded-md outline-none cursor-default select-none text-gray-500 focus:bg-white/5 radix-disabled:opacity-50 radix-disabled:cursor-not-allowed transition-colors ease-out duration-200 disabled:opacity-75"
   const itemTextStyle = "ml-2 flex-grow text-gray-200"
 
   // Copy Source
@@ -74,12 +74,7 @@ export default function Card({ source, animation, editLink, playgroundLink }: IS
   )
 
   return (
-    <ContextMenu.Root
-      onOpenChange={(open) => {
-        console.log(open)
-        setContextMenu(open)
-      }}
-    >
+    <ContextMenu.Root onOpenChange={(open) => setContextMenu(open)}>
       <ContextMenu.Trigger>
         <div className="bg-gray-800/40 backdrop-blur ring-1 ring-inset ring-gray-500/20 h-28 w-full rounded-lg flex cursor-context-menu">
           <div className="m-auto text-gray-200 select-none">{source}</div>
@@ -92,15 +87,13 @@ export default function Card({ source, animation, editLink, playgroundLink }: IS
             <span className={itemTextStyle}>Copy Source</span>
             <kbd>S</kbd>
           </ContextMenu.Item>
-          {/* TODO: disabled state */}
-          <ContextMenu.Item className={itemStyle} onSelect={() => handleCopyAnimation()}>
+          <ContextMenu.Item className={itemStyle} disabled={!animation} onSelect={() => handleCopyAnimation()}>
             <MagicWandIcon className="mb-[2px]" />
             <span className={itemTextStyle}>Copy Keyframes</span>
             <kbd>K</kbd>
           </ContextMenu.Item>
-          {/* TODO: disabled state */}
           <ContextMenu.Separator className="h-px m-1 bg-gray-500/30" />
-          <ContextMenu.Item className={itemStyle} onSelect={() => handleOpenInPlayground()}>
+          <ContextMenu.Item className={itemStyle} disabled={!playgroundLink} onSelect={() => handleOpenInPlayground()}>
             <PlayIcon className="mb-px" />
             <span className={itemTextStyle}>Open in Playground</span>
             <kbd>P</kbd>

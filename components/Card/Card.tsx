@@ -82,7 +82,7 @@ export default function Card({ source, animation, editLink, playgroundLink }: IS
     >
       <ContextMenu.Trigger>
         <div className="bg-gray-800/40 backdrop-blur ring-1 ring-inset ring-gray-500/20 h-28 w-full rounded-lg flex cursor-context-menu">
-          <div className="m-auto text-gray-200">{source}</div>
+          <div className="m-auto text-gray-200 select-none">{source}</div>
         </div>
       </ContextMenu.Trigger>
       {isContextMenuOpen && (

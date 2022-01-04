@@ -9,6 +9,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en" className="nightwind">
         <Head>
+          {/* eslint-disable-next-line @next/next/no-title-in-document-head */}
           <title>Snippets</title>
           <meta name="description" content={description} />
           <link rel="icon" href="/favicon.ico" />
@@ -42,7 +43,7 @@ export default class Document extends NextDocument {
             rel="stylesheet"
           />
         </Head>
-        <body className="relative bg-[#0a1120] ">
+        <body className="relative bg-[#0a1120]">
           <div className="absolute h-full w-full bg-[url('/beams.png')] bg-cover bg-center bg-fixed">
             <div className="absolute h-full w-full bg-[url('/grid.svg')] [background-position:calc(100%+5px)_calc(100%+5px)] bg-fixed" />
           </div>

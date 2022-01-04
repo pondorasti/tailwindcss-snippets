@@ -37,7 +37,7 @@ export default function LinkPreview({ name, href, alt, preview }: ILinkPreview) 
       <Tooltip.Content
         side="top"
         sideOffset={16}
-        className="p-2 h-40 w-64 rounded-lg bg-gray-900/95 backdrop-blur ring-1 ring-inset ring-gray-500/30 radix-side-top:animate-slide-in radix-state-closed:animate-slide-out"
+        className="p-2 h-40 w-64 rounded-lg bg-gray-900/95 backdrop-blur ring-1 ring-inset ring-gray-500/30 animate-slide-in radix-state-closed:animate-slide-out"
       >
         <Image
           src={

@@ -59,7 +59,12 @@ function Home(): JSX.Element {
         <div className="mt-16 text-center text-gray-500 text-sm font-light">
           Crafted by{" "}
           <span className="text-gray-200 font-light">
-            <LinkPreview name="Alexandru" href="https://twitter.com/Pondorasti" alt="Alexandru's Twitter" />
+            <LinkPreview
+              name="Alexandru"
+              href="https://twitter.com/Pondorasti"
+              preview="/twitter-preview.png"
+              alt="Alexandru's Twitter"
+            />
           </span>
         </div>
       </footer>

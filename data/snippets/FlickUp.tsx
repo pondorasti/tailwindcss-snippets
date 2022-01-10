@@ -1,6 +1,6 @@
 const FlickUp: ISnippet = {
   title: "Flick Up",
-  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets.tsx#L207",
+  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets/FlickUp.tsx",
   playgroundLink: "https://play.tailwindcss.com/n22Rh5HMTY",
   source: (
     <div className="relative overflow-hidden group">

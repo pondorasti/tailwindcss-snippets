@@ -1,6 +1,6 @@
 const ThreeDotsLoader: ISnippet = {
   title: "Three Dots Loader",
-  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets.tsx#L165",
+  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets/ThreeDotsLoader.tsx",
   playgroundLink: "https://play.tailwindcss.com/i12OeK41ZE",
   source: (
     <div>

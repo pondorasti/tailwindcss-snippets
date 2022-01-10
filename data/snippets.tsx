@@ -246,6 +246,40 @@ const snippets: ISnippet[] = [
     playgroundLink: "https://play.tailwindcss.com/Mf77KHXg25",
     source: <div className="animate-pulse bg-gray-900 h-12 w-40 rounded-lg"></div>,
   },
+  {
+    title: "Underline Squiggle",
+    editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets.tsx#L250",
+    playgroundLink: "https://play.tailwindcss.com/Mf77KHXg25",
+    source: (
+      <div className="underline underline-offset-[3px] hover:no-underline hover:bg-[url('https://snippets.alexandru.so/squiggle.svg')]">
+        Hover over me
+      </div>
+    ),
+  },
+  {
+    title: "Material Text Input",
+    editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets.tsx#L260",
+    playgroundLink: "",
+    source: (
+      <div className="bg-gray-900 p-4 rounded-lg">
+        <div className="relative">
+          <input
+            id="username"
+            name="username"
+            type="text"
+            className="peer bg-transparent h-10 w-36 rounded-lg text-gray-200 placeholder-transparent ring-2 px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-rose-600"
+            placeholder="Type inside me"
+          />
+          <label
+            htmlFor="username"
+            className="absolute left-0 -top-3 text-sm text-gray-500 bg-gray-900 mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all"
+          >
+            Type inside me
+          </label>
+        </div>
+      </div>
+    ),
+  },
 ]
 
 export default snippets

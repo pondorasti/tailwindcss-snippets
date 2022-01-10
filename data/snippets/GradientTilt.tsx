@@ -1,6 +1,6 @@
 const GradientTilt: ISnippet = {
   title: "Gradient Tilt",
-  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets.tsx#L223",
+  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets/GradientTilt.tsx",
   playgroundLink: "https://play.tailwindcss.com/GMTiinWZXq?file=config",
   source: (
     <div className="relative group">

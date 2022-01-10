@@ -1,6 +1,6 @@
 const Spinner: ISnippet = {
   title: "Spinner",
-  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets.tsx#L56",
+  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets/Spinner.tsx",
   playgroundLink: "https://play.tailwindcss.com/S7AMIMNDYf",
   source: (
     <svg className="animate-spin h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

@@ -1,6 +1,6 @@
 const Swing: ISnippet = {
   title: "Swing",
-  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets.tsx#L87",
+  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets/Swing.tsx",
   playgroundLink: "https://play.tailwindcss.com/7HznJM2eA0",
   source: <div className="hover:animate-swing">Hover over me</div>,
   animation: `keyframes: {

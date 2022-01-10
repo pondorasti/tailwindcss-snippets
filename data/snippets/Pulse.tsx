@@ -1,6 +1,6 @@
 const Pulse: ISnippet = {
   title: "Pulse",
-  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets.tsx#L13",
+  editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets/Pulse.tsx",
   playgroundLink: "https://play.tailwindcss.com/Lua057Ji2l",
   source: (
     <div className="flex h-8 w-8 absolute">

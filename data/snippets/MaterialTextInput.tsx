@@ -4,7 +4,7 @@ const MaterialTextInput: ISnippet = {
   playgroundLink: "https://play.tailwindcss.com/qefBelEn8d",
   source: (
     <div className="bg-gray-900 p-4 rounded-lg">
-      <div className="relative">
+      <div className="relative bg-inherit">
         <input
           id="username"
           name="username"
@@ -14,7 +14,7 @@ const MaterialTextInput: ISnippet = {
         />
         <label
           htmlFor="username"
-          className="absolute cursor-text left-0 -top-3 text-sm text-gray-500 bg-gray-900 mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all"
+          className="absolute cursor-text left-0 -top-3 text-sm text-gray-500 bg-inherit mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all"
         >
           Type inside me
         </label>

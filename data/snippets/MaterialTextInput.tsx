@@ -1,7 +1,7 @@
 const MaterialTextInput: ISnippet = {
   title: "Material Text Input",
   editLink: "https://github.com/Pondorasti/tailwindcss-snippets/blob/main/data/snippets/MaterialTextInput.tsx",
-  playgroundLink: "https://play.tailwindcss.com/qefBelEn8d",
+  playgroundLink: "https://play.tailwindcss.com/DPlIUMU7jB",
   source: (
     <div className="bg-gray-900 p-4 rounded-lg">
       <div className="relative bg-inherit">

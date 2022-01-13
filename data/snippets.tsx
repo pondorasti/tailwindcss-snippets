@@ -32,9 +32,9 @@ const snippets: ISnippet[] = [
   GradientTilt,
 
   UnderlayMarker,
-  TextTransformColor,
-  FlickUp,
   Swing,
+  FlickUp,
+  TextTransformColor,
 
   KeyboardButton,
   HoverScaleButton,

@@ -22,26 +22,31 @@ import MaterialTextInput from "./snippets/MaterialTextInput"
 
 const snippets: ISnippet[] = [
   UnderlineLeftRight,
-  Pulse,
-  KeyboardButton,
-  UnderlayMarker,
-  UnderlayLeft,
-  Spinner,
-  HoverActiveScaleButton,
-  Swing,
   UnderlineBottomTop,
-  UnderlayLeftRight,
-  TextTransformColor,
-  Shimmer,
-  UnderlayExpandingCircle,
-  ThreeDotsLoader,
-  HoverScaleButton,
   ActiveUnderlineLeftRight,
-  FlickUp,
-  GradientTilt,
-  BackgroundPulse,
   UnderlineSquiggle,
+
+  UnderlayLeft,
+  UnderlayLeftRight,
+  UnderlayExpandingCircle,
+  GradientTilt,
+
+  UnderlayMarker,
+  TextTransformColor,
+  FlickUp,
+  Swing,
+
+  KeyboardButton,
+  HoverScaleButton,
+  HoverActiveScaleButton,
   MaterialTextInput,
+
+  Spinner,
+  BackgroundPulse,
+  ThreeDotsLoader,
+  Shimmer,
+
+  Pulse,
 ]
 
 export default snippets

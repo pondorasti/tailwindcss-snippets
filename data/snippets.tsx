@@ -19,6 +19,7 @@ import GradientTilt from "./snippets/GradientTilt"
 import BackgroundPulse from "./snippets/BackgroundPulse"
 import UnderlineSquiggle from "./snippets/UnderlineSquiggle"
 import MaterialTextInput from "./snippets/MaterialTextInput"
+import TextShimmer from "./snippets/TextShimmer"
 
 const snippets: ISnippet[] = [
   UnderlineLeftRight,
@@ -47,6 +48,7 @@ const snippets: ISnippet[] = [
   Shimmer,
 
   Pulse,
+  TextShimmer,
 ]
 
 export default snippets

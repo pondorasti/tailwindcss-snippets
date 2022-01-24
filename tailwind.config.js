@@ -27,6 +27,10 @@ module.exports = {
           from: { backgroundPosition: "200% 0" },
           to: { backgroundPosition: "-200% 0" },
         },
+        "text-shimmer": {
+          from: { backgroundPosition: "0 0" },
+          to: { backgroundPosition: "-200% 0" },
+        },
         swing: {
           "15%": { transform: "translateX(5px)" },
           "30%": { transform: "translateX(-5px)" },
@@ -55,6 +59,7 @@ module.exports = {
         tilt: "tilt 10s infinite linear",
         flash: "flash 1.4s infinite linear",
         shimmer: "shimmer 8s ease-in-out infinite",
+        "text-shimmer": "text-shimmer 2.5s ease-out infinite alternate",
         swing: "swing 1s ease 1",
         "fade-in": "fade-in 0.1s ease-out",
         "fade-out": "fade-out 0.1s ease-in",

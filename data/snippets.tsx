@@ -20,6 +20,7 @@ import BackgroundPulse from "./snippets/BackgroundPulse"
 import UnderlineSquiggle from "./snippets/UnderlineSquiggle"
 import MaterialTextInput from "./snippets/MaterialTextInput"
 import TextShimmer from "./snippets/TextShimmer"
+import SimpleButton from "./snippets/SimpleButton"
 
 const snippets: ISnippet[] = [
   UnderlineLeftRight,
@@ -49,6 +50,7 @@ const snippets: ISnippet[] = [
 
   Pulse,
   TextShimmer,
+  SimpleButton,
 ]
 
 export default snippets
